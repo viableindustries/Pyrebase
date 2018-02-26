@@ -27,6 +27,9 @@ import datetime
 def initialize_app(config):
     return Firebase(config)
 
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class Firebase:
     """ Firebase Interface """
